@@ -1,0 +1,9 @@
+corp: '96247519-73b7-4b20-88f1-85d93d0a0298'
+parent: 'fb920c5e-0136-4f14-be23-721fdb871042'
+children:
+  - platform: '6ef9fc7e-ae1d-4c6f-8bff-e15e16783778'
+  - sandbox: 'ebd0c288-95de-4099-b0c6-ca3e5af02d9c'
+  - lz: '2bed9580-e64f-4e83-b4e7-da94b4ffee01'
+    children:
+      - hybrid: 'a6de1e1e-9f6e-4e42-8112-94d63e7668d7'
+      - online: 'afdd2066-b773-4aa1-bab1-d94365b5ccd0'
