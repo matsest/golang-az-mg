@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"strings"
 
 	"gopkg.in/yaml.v3"
@@ -62,8 +63,12 @@ func (mg *ManagementGroup) print(level int) {
 
 func main() {
 	// Input parameters
-	var printFile = flag.Bool("printFile", false, "to print file content")
-	var file = flag.String("file", "mg.yml", "name of file to read")
+	var printFile = flag.Bool("printFile", false, "bool flag to print yaml file content (default false)")
+	var file = flag.String("file", "mg.yml", "name of file to read from")
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "When in doubt, look for help...\n")
+		flag.PrintDefaults()
+	}
 	flag.Parse()
 
 	// Read file content
