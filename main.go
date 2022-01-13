@@ -79,7 +79,7 @@ func main() {
 		log.Fatalf("Unmarshal: %v", err)
 	}
 
-	// TODO: Add parent id to all nodes?
+	// Add parentId to all ManagementGroup entries
 	mg.setParents()
 
 	// Print file content
