@@ -12,10 +12,10 @@ import (
 )
 
 type ManagementGroup struct {
-	DisplayName string             `yaml:"name"`
-	Id          string             `yaml:"id"`
+	DisplayName string             `yaml:"name" json:"name"`
+	Id          string             `yaml:"id" json:"id"`
 	parentId    string             // not marshable (lowercase)
-	Children    *[]ManagementGroup `yaml:"children"`
+	Children    *[]ManagementGroup `yaml:"children" json:"children"`
 }
 
 // Sets the ParentID in nested ManagementGroup structs
